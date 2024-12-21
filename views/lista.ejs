@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Canciones</title>
+</head>
+<body>
+    <h1>Lista de Canciones</h1>
+    <ul>
+        <% canciones.forEach((cancion) => { %>
+            <li>
+                <%= cancion.titulo %> - <%= cancion.artistita %> - <%= cancion.duracion %>
+                <a href="<%= cancion.url %>" target="_blank">Escuchar en YouTube</a>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/canciones/nueva">Agregar nueva canción</a>
+</body>
+</html>
